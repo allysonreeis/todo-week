@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+:root {
+  --color-green: #50fa7b;
+  --color-purple: #7159c1;
+}
+
+.todo-week {
+  background-color: var(--color-purple);
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  justify-content: center;
+  justify-items: center;
+  
+}
+
+.todo-day {
+  height: 600px;
+  width: 400px;
+  border: 2px solid var(--color-green);
+  border-radius: 10px;
+}
