@@ -1,6 +1,5 @@
-let todoList = ['Allyson'];
+let todoList = [];
 let todoListEl = document.querySelector('.todoList');
-let inputContent = document.querySelector('.todo-text-monday');
 
 document.querySelector('input').addEventListener('keyup', (event)=>{
   if (event.key === 'Enter') {
@@ -9,6 +8,13 @@ document.querySelector('input').addEventListener('keyup', (event)=>{
     renderTodo();
   }
   
+});
+
+document.querySelector('.add_button').addEventListener('click', event => {
+  let inputEl = document.querySelector('input');
+  todoList.push(inputEl.value);
+  inputEl.value = '';
+  renderTodo();
 });
 
 function renderTodo () {
