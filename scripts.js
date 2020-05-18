@@ -1,5 +1,3 @@
-let todoList = [];
-
 let todoWeekData = [
   {
     dayName: "monday",
@@ -73,12 +71,12 @@ function renderTodo () {
   
   for (var todoDay of todoWeekData) {
     
-    let nameDiv = document.querySelector(`#${todoDay.dayName}>ul`);
-    nameDiv.innerHTML = '';
+    let ulSelected = document.querySelector(`#${todoDay.dayName}>ul`);
+    ulSelected.innerHTML = '';
 
     for (var i = 0; i < todoDay.todos.length; i++) {
       
-      if (todoDay.dayName == nameDiv.parentElement.id) {
+      if (todoDay.dayName == ulSelected.parentElement.id) {
         var li = document.createElement('li');
         li.innerHTML = `
           <input type="checkbox" id="task-${i+1}">
@@ -86,7 +84,7 @@ function renderTodo () {
           <button class="button-x" type="button">x</button>
         `;
 
-        nameDiv.append(li);
+        ulSelected.append(li);
       }
 
     }
