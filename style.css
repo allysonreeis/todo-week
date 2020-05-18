@@ -4,15 +4,19 @@ body {
   margin: 0;
   padding: 0;
   border: 0;
+  background-color: var(--color-back);
 }
 
 :root {
   --color-green: #50fa7b;
-  --color-purple: #7159c1;
+  --color-back: #f2f2f2;
+  --color-purple: #592a85;
+  --color: rgb(56, 56, 56);
+  --color-card: #FFF;
 }
 
 .todo-week {
-  background-color: var(--color-purple);
+  
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -22,23 +26,26 @@ body {
 }
 
 .todo-day {
+  background-color: var(--color-card);
   height: 600px;
   width: 400px;
-  border: 2px solid var(--color-green);
+  border: 1px solid var(--color-purple);
   border-radius: 10px;
   position: relative;
   overflow: hidden;
+  
 }
 
 h3 {
-  color: white;
+  color: --color;
   font-size: 34px;
   margin: 5px;
+  text-align: center;
 }
 
 ul {
   font-size: 24px;
-  color: white;
+  color: --color;
   /* display: grid; */
 }
 
@@ -74,7 +81,7 @@ input[type="text"]{
 }
 
 .add_button {
-  color: white;
+  color:var(--color-purple);
   position: absolute;
   right: 10px;
   bottom: 1px;
