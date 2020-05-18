@@ -80,7 +80,11 @@ function renderTodo () {
       
       if (todoDay.dayName == nameDiv.parentElement.id) {
         var li = document.createElement('li');
-        li.innerHTML = `<li>${todoDay.todos[i]}</li>`;
+        li.innerHTML = `
+          <input type="checkbox" id="task-${i+1}">
+          <label for="task-${i+1}">${todoDay.todos[i]}</label>
+          <button class="button-x" type="button">x</button>
+        `;
 
         nameDiv.append(li);
       }
