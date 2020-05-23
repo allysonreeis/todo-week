@@ -5,3 +5,7 @@ Repositório para o desenvolvimento de uma mini página web que funciona como um
 
 
 ![gif da aplicação funcionando](https://github.com/allysonreeis/todo-week/blob/master/screen-gif/gif-todo-week.gif)
+
+## Aviso
+
+A funcionalidade de clicar no botão 'x' e excluir um to-do ainda não está funcionando.
